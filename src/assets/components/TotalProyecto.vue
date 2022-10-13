@@ -35,7 +35,7 @@
                     
                     <td @click="cambiarEstado(proyecto, 'urgente')" :class="proyecto.urgente ? 'bg-success' : 'bg-danger'"> {{ proyecto.urgente ? "Si" : "No" }} </td>
                     <td @click="cambiarEstado(proyecto, 'completado')" :class="proyecto.completado ? 'bg-success' : 'bg-danger'"> {{ proyecto.completado ? "Completo" : "Incompleto" }} </td>
-                    <td @click="borrarproyecto(index)">
+                    <td @click="borrar(index)">
                         borrar
                     </td>
                 </tr>
@@ -47,6 +47,6 @@
 
 <script>
     export default{
-        props: ['numeroProyectos','proyectos', 'cambiarEstado', 'limpiarData','borrarproyecto'],
+        props: ['numeroProyectos','proyectos', 'cambiarEstado', 'limpiarData','borrar'],
     };
 </script>

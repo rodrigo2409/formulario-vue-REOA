@@ -34,7 +34,7 @@
             </form>  
         </div>
         <div class="col-12 col-md-8">
-            <total-proyecto :numeroProyectos="numeroProyectos" :proyectos="proyectos" :cambiarEstado="cambiarEstado" :limpiarData="limpiarData" :delteData="delteData" :borrarproyecto="borrarproyecto" />
+            <total-proyecto :numeroProyectos="numeroProyectos" :proyectos="proyectos" :cambiarEstado="cambiarEstado" :limpiarData="limpiarData" :delteData="delteData" :borrar="borrar" />
             <!-- <pre>
                 {{ proyecto }}
                 {{ tipo }}
@@ -95,9 +95,9 @@ import TotalProyecto from './TotalProyecto.vue';
                 this.proyectos=[];
                 localStorage.clear();
             },
-            borrarproyecto(index) {
+            borrar(index) {
             this.proyectos.splice(index,1);
-            localStorage.clear(index,1);
+            this.saveData();
         },
             
         },
